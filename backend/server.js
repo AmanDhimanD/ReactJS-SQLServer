@@ -15,15 +15,7 @@ app.get("/", (req, res) => {
   })
 });
 
-app.get('/employee/:id',(req,res)=>{
-  const userId = parseInt(req.params.id);
-  const query = "select * from employees where EMPLOYEE_ID = "+userId
-  console.log(query)
-  sql.query(connectionString,query,(err,response)=>{
-    //console.log(response)
-    res.send(response)
-  })
-})
+
 
 
 app.listen(8000, () => {
